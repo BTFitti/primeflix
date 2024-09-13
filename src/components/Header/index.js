@@ -1,8 +1,11 @@
+import './header.css';
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <header>
-      <span>Primeflix</span>
-      <a className="botao">Meus filmes</a>
+      <Link className="logo" to="/" >Primeflix</Link>
+      <Link className='favoritos' to="/favoritos">Meus filmes</Link>
     </header>
   );
 }
