@@ -6,12 +6,11 @@
   padding: 10px 0;
 }
 .filme-info {
-    margin: 0 auto;
+  margin: 0 auto;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   max-width: 900px;
-
 }
 
 .detailsimg {
@@ -38,7 +37,7 @@
 }
 .details-buttons button {
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   padding: 12px;
   color: #f2f2f2;
   font-weight: bold;

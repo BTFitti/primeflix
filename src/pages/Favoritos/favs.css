@@ -1,0 +1,32 @@
+.meus-favs{
+   margin-top: 24px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.meus-favs h1{
+    margin-bottom: 14px;
+}
+.meus-favs span{
+    font-size: 19px;
+}
+.meus-favs ul{
+    width: 720px;
+}
+.meus-favs ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.meus-favs div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meus-favs div a{
+    text-decoration: none;
+    color: #116feb;
+    margin-right: 14px;
+}
