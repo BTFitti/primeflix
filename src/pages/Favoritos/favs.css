@@ -29,4 +29,21 @@
     text-decoration: none;
     color: #116feb;
     margin-right: 14px;
+    padding: 10px;
+    border-radius: 8px;
+   
+
 }
+.button-exclude{
+    cursor: pointer;
+     border: 0;
+}
+.meus-favs img{
+   
+    width: 50px;
+    transition: all 0.8s;
+}
+.meus-favs img:hover{
+    width: 60px;
+}
+

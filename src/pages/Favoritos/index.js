@@ -1,6 +1,7 @@
 import "./favs.css";
 import { useEffect, useState } from "react";
-import { Link, json } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function Favoritos() {
   const [filmes, setFilmes] = useState([]);
@@ -10,11 +11,12 @@ function Favoritos() {
   }, []);
 
   function movieRemover(id) {
-    let filtroFilmes = filmes.filter((item)=>{
-        return(item.id !== id)
-    })
+    let filtroFilmes = filmes.filter((item) => {
+      return item.id !== id;
+    });
     setFilmes(filtroFilmes);
-    localStorage.setItem("@primeflix",JSON.stringify(filtroFilmes))
+    localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes));
+    toast.success("Filme removido com sucesso!");
   }
 
   return (
@@ -28,7 +30,9 @@ function Favoritos() {
               <span>{item.title}</span>
               <div>
                 <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <button onClick={() => movieRemover(item.id)}>Excluir</button>
+                <button className="button-exclude">
+                  <img  onClick={() => movieRemover(item.id)} src="delete_24dp_8B1A10_FILL0_wght400_GRAD0_opsz24.png" alt="Excluir"/>
+                </button>
               </div>
             </li>
           );
