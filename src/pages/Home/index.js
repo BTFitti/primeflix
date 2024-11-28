@@ -18,23 +18,23 @@ function Home() {
           page: 1,
         },
       });
-      setFilmes(response.data.results.slice(0, 10));
+      setFilmes(response.data.results.slice(0, 20));
       setLoading(false);
     }
     carregarFilmes();
   }, []);
-
-
-  if(loading){
-    return(
+  
+  if (loading) {
+    return (
       <div className="loading">
         <h2>Carregando filmes...</h2>
       </div>
-    )
+    );
   }
 
   return (
     <div className="container">
+      <hr></hr>
       <div className="lista-filmes">
         {filmes.map((item) => {
           return (
@@ -54,6 +54,7 @@ function Home() {
           );
         })}
       </div>
+    
     </div>
   );
 }
